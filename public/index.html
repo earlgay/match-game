@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--
+Copyright 2020 Google LLC
+
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+        <title>Match Game</title>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+        <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    </head>
+
+    <body>
+        <!-- Game Section -->
+        <div id="game-section" class="container">
+            <div id="scoreboard" class="row center">
+                <div id="currentScore" class="col s12">--</div>
+            </div>
+            <div id="game-board" class="row center"></div>
+            <div class="row center">
+                <span id="newgame-button" class="btn-large grey darken-3">New Game</span>
+            </div>
+        </div>
+
+        <!-- Completion Notification -->
+        <div id="completeModal" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Congratulations!</h4>
+                <p>You have successfully completed the board! It took you <span id="finalScore"></span> extra moves.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>

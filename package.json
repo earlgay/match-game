@@ -1,0 +1,17 @@
+{
+    "name": "run-match-game",
+    "version": "0.1",
+    "description": "Classic Matching Game",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Earl Gay",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "express": "~4.16.1"
+    },
+    "devDependencies": {
+        "eslint": "^7.3.1"
+    }
+}

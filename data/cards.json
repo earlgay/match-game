@@ -1,0 +1,36 @@
+{
+    "cards": [
+        {
+            "id": "OLJCESPC7Z",
+            "picture": "/img/gcp/ai.jpg"
+        },
+        {
+            "id": "66VCHSJNUP",
+            "picture": "/img/gcp/anthos.jpg"
+        },
+        {
+            "id": "1YMWWN1N4O",
+            "picture": "/img/gcp/bigquery.jpg"
+        },
+        {
+            "id": "L9ECAV7KIM",
+            "picture": "/img/gcp/datawarehouse.jpg"
+        },
+        {
+            "id": "2ZYFJ3GM2N",
+            "picture": "/img/gcp/science.jpg"
+        },
+        {
+            "id": "0PUK6V6EV0",
+            "picture": "/img/gcp/gke.jpg"
+        },
+        {
+            "id": "LS4PSXUNUM",
+            "picture": "/img/gcp/monitor.jpg"
+        },
+        {
+            "id": "9SIQT8TOJO",
+            "picture": "/img/gcp/icons.png"
+        }
+    ]
+}
