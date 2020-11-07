@@ -116,47 +116,5 @@
             "picture": "/img/vacation/swseal.jpg",
             "source": "http://www.esquared.dev"
         }
-    ],
-    "gcp": [
-        {
-            "id": "OLJCESPC7Z",
-            "picture": "/img/gcp/ai.jpg",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "66VCHSJNUP",
-            "picture": "/img/gcp/anthos.jpg",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "1YMWWN1N4O",
-            "picture": "/img/gcp/bigquery.jpg",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "L9ECAV7KIM",
-            "picture": "/img/gcp/datawarehouse.jpg",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "2ZYFJ3GM2N",
-            "picture": "/img/gcp/gke.jpg",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "0PUK6V6EV0",
-            "picture": "/img/gcp/icons.png",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "LS4PSXUNUM",
-            "picture": "/img/gcp/monitor.jpg",
-            "source": "http://www.esquared.dev"
-        },
-        {
-            "id": "9SIQT8TOJO",
-            "picture": "/img/gcp/science.jpg",
-            "source": "http://www.esquared.dev"
-        }
     ]
 }

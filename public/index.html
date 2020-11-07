@@ -1,53 +1,116 @@
-<!DOCTYPE html>
 <!--
 Copyright 2020 Google LLC
 
- Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-      http://www.apache.org/licenses/LICENSE-2.0
+     http://www.apache.org/licenses/LICENSE-2.0
 
- Unless required by applicable law or agreed to in writing, software
- distributed under the License is distributed on an "AS IS" BASIS,
- WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- See the License for the specific language governing permissions and
- limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
 -->
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
-        <title>Match Game</title>
+        <title>Concentration Game</title>
 
+        <script defer src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+        <script defer src="/js/init-firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Short+Stack&display=swap" rel="stylesheet" />
+
+        <!-- Material Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <!-- Compiled and minified CSS for Materialize-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
-        <link href="style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+        <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
     </head>
 
     <body>
-        <!-- Game Section -->
-        <div id="game-section" class="container">
-            <div id="scoreboard" class="row center">
-                <div id="currentScore" class="col s12">--</div>
-            </div>
-            <div id="game-board" class="row center"></div>
-            <div class="row center">
-                <span id="newgame-button" class="btn-large grey darken-3">New Game</span>
+        <img class="headerimg" src="/img/npgheader.png" />
+
+        <!-- Options Section: Displayed at start to select game board. -->
+        <div id="options-section" class="row center centered green darken-2">
+            <div>
+                <div>Welcome, <span class="playerName"></span>!<br /><br /></div>
+                <div id="selectMenu" class="input-field col">
+                    <select id="board-select" class="icons">
+                        <option value="gcp" selected data-icon="/img/gcp.png">GCP</option>
+                        <option value="hipster" selected data-icon="/img/hipster.jpg">Hipster</option>
+                        <option value="dogs" data-icon="/img/dogs.jpg">Dogs</option>
+                        <option value="vacation" data-icon="/img/vacation.jpg">Vacation</option>
+                    </select>
+                    <label>Choose game board</label>
+                </div>
+                <br />
+                <span id="boardSelect-button" class="btn-large grey darken-3">Start</span>
+                <span class="btn-large grey darken-3 signout">Sign Out</span>
             </div>
         </div>
+        <div id="signin-section" class="row center centered green darken-2">
+            <div id="firebaseui-auth-container"></div>
+        </div>
 
-        <!-- Completion Notification -->
-        <div id="completeModal" class="modal bottom-sheet">
+        <!-- Game Section: Displayed when game starts. -->
+        <div id="game-section" class="container">
+            <div class="section">
+                <div id="scoreboard" class="row center">
+                    <div class="col s12">Current score: <span id="currentScore">--</span></div>
+                </div>
+                <div id="game-board" class="row center"></div>
+
+                <div class="row center">
+                    <span id="newgame-button" class="btn-large grey darken-3">New Game</span>
+                    <span id="scores-button" class="btn-large grey darken-3">High Scores</span>
+                    <span class="btn-large grey darken-3 signout">Sign Out</span>
+                </div>
+            </div>
+            <br />
+        </div>
+
+        <!-- High Score List -->
+        <div id="scoresModal" class="modal modal-fixed-footer">
             <div class="modal-content">
-                <h4>Congratulations!</h4>
-                <p>You have successfully completed the board! It took you <span id="finalScore"></span> extra moves.</p>
+                <h4>High Scores</h4>
+                <div id="scoreList"></div>
             </div>
             <div class="modal-footer">
                 <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
             </div>
         </div>
 
+        <!-- Completion Notification -->
+        <div id="completeModal" class="modal bottom-sheet">
+            <div class="modal-content">
+                <h4>Congratulations, <span class="playerName"></span>!</h4>
+                <p>You have successfully completed the board! It took you <span id="finalScore"></span> moves. Your score ranks #<span id="scoreRank"></span> overall!</p>
+                <div class="center">
+                    <img id="castle" src="/img/npgcastle.png" />
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-close waves-effect waves-green btn-flat">Close</a>
+            </div>
+        </div>
+
+        <footer class="page-footer green darken-3">
+            <img class="footerimg" src="/img/npgfooter.png" />
+        </footer>
+
+        <!--  Scripts-->
+        <!-- Compiled and minified JavaScript for Materialize -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="index.js"></script>
+        <script src="/js/index.js"></script>
     </body>
 </html>

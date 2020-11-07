@@ -1,7 +1,7 @@
 {
-    "name": "run-match-game",
-    "version": "0.1",
-    "description": "Classic Matching Game",
+    "name": "match-game",
+    "version": "1.0.0",
+    "description": "Matching Game",
     "main": "index.js",
     "scripts": {
         "start": "node index.js"
@@ -9,9 +9,14 @@
     "author": "Earl Gay",
     "license": "Apache-2.0",
     "dependencies": {
-        "express": "~4.16.1"
+        "express": "~4.16.1",
+        "firebase-admin": "^9.2.0"
     },
     "devDependencies": {
         "eslint": "^7.3.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/earlgay/match-game.git"
     }
 }

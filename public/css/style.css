@@ -1,0 +1,156 @@
+footer {
+    background: #999;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0 10px 0 !important;
+    position: fixed;
+    width: 100%;
+    z-index: -4;
+}
+ul.dropdown-content.select-dropdown li span {
+    color: #2196f3;
+}
+ul.dropdown-content li img {
+    object-fit: cover;
+}
+body {
+    background: url('/img/cloudbg.jpg') no-repeat center;
+    font-family: 'Short Stack', cursive;
+    margin: 0 auto;
+}
+input.select-dropdown {
+    color: white;
+    font-family: 'Short Stack', cursive;
+}
+.icon-block {
+    padding: 0 15px;
+}
+.icon-block .material-icons {
+    font-size: inherit;
+}
+.card-image {
+    /* Make card blue when face-down, and keep it a minimum height so images are all consistent size. */
+    border-radius: 3px;
+    height: 80px;
+}
+.centered {
+    left: 50%;
+    position: fixed;
+    top: 30%;
+    transform: translate(-50%, -50%);
+}
+.gamepiece {
+    /* Ensure image takes up card space, and covers card. */
+    height: 100%;
+    object-fit: cover;
+}
+.headerimg {
+    object-fit: cover;
+    padding-top: 2%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: -2;
+}
+.footerimg {
+    bottom: 0;
+    left: 0;
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+.input-field > label {
+    color: #d1d1d1;
+}
+.toast {
+    border-radius: 5px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: white;
+    font-size: 1.5em;
+    font-weight: 900;
+    text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+#toast-container {
+    bottom: 10%;
+    left: 7%;
+    right: auto !important;
+    top: auto !important;
+}
+#unicorntoast {
+    height: 80px;
+}
+#game-section {
+    display: none;
+    padding-top: 40px;
+}
+#game-board {
+    max-width: 800px;
+}
+#options-section {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding: 30px;
+    visibility: hidden;
+}
+#signin-section {
+    background: white;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    margin-top: 30px;
+    padding: 30px;
+}
+#btn-signout {
+    visibility: hidden;
+}
+#selectMenu {
+    width: 200px;
+}
+#castle {
+    height: 78px;
+    width: 162px;
+}
+.playerName,
+#scoreboard {
+    font-weight: bold;
+}
+#scoresModal {
+    height: 30em;
+    width: 30em;
+}
+#finalScore,
+#scoreRank {
+    font-size: 2em;
+    font-weight: bold;
+}
+@media screen and (min-width: 500px) {
+    /* Above a standard mobile device */
+    .card-image {
+        height: 120px;
+    }
+    #castle {
+        height: 207px;
+        width: 432px;
+    }
+}
+@media screen and (min-width: 1000px) and (min-height: 1081px) {
+    /* iPad Pro */
+    .card-image {
+        height: 200px;
+    }
+}
+@media screen and (min-height: 950px) and (min-width: 731px) and (max-width: 1200px) {
+    /* Desktop window view */
+    #game-board {
+        margin-top: 10%;
+    }
+}
+@media screen and (min-width: 1500px) {
+    .headerimg {
+        padding-top: 0;
+    }
+}
