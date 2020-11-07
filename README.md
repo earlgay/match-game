@@ -1,5 +1,7 @@
 # Match Game
 
+**Disclaimer: This is not an officially supported Google project.**
+
 ## Prequisites
 1. [gcloud](https://cloud.google.com/sdk)
 1. [firebase-tools](https://github.com/firebase/firebase-tools)
