@@ -1,5 +1,9 @@
 # Match Game
 
+This code implements the classic [Matching game](https://en.wikipedia.org/wiki/Matching_game).
+
+The frontend is deployed as a static site for HTML, javascript, and images. The backend API is called to obtain the shuffled card deck and to handle high scores. The card deck information is stored in a flat JSON file in order to avoid implementing an actual database. High scores are stored within [Firestore](https://cloud.google.com/firestore). Authentication uses [Firebase Authentication](https://firebase.google.com/products/auth). Instructions are for deployment with [Cloud Run](https://cloud.google.com/run).
+
 **Disclaimer: This is not an officially supported Google project.**
 
 ## Prequisites
